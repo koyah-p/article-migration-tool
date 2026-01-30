@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>記事移行ツール (Article Migration Tool)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>記事移行ツール</h1>
+            <p>異なるサイト間のHTMLフォーマット変換をサポートします。</p>
+        </header>
+
+        <main class="app-main">
+            <!-- Left Column: Input & Configuration -->
+            <section class="panel input-panel">
+                <div class="panel-header">
+                    <h2>設定と入力 (Source)</h2>
+                    <button class="btn-secondary" id="btn-toggle-reg">サイト管理・登録 ⚙️</button>
+                </div>
+
+                <!-- Site Manager (Hidden by default) -->
+                <div id="reg-area" class="registration-area"
+                    style="display:none; padding:15px; background:#f0f9ff; border-bottom:1px solid #bae6fd;">
+
+                    <!-- New Site Upload -->
+                    <div style="margin-bottom: 20px;">
+                        <h3 style="margin-top:0; font-size:0.9rem; color:#0369a1;">▼ 新規サイト登録 (Markdown)</h3>
+                        <div class="reg-inputs" style="display:flex; gap:10px; margin-bottom:10px;">
+                            <input type="text" id="reg-site-name" placeholder="サイト名 (例: 新サイトA)"
+                                style="flex:1; padding:5px;">
+                            <input type="file" id="reg-file-upload" accept=".md,.txt,.markdown" style="flex:1;">
+                        </div>
+                        <button id="btn-register" class="btn-primary" style="width:100%;">登録 / 更新</button>
+                    </div>
+
+                    <!-- Existing Sites List -->
+                    <div>
+                        <h3 style="margin-top:0; font-size:0.9rem; color:#0369a1;">▼ 登録済みサイト一覧</h3>
+                        <ul id="site-list"
+                            style="list-style:none; padding:0; margin:0; max-height:150px; overflow-y:auto; border:1px solid #e2e8f0; background:#fff; border-radius:4px;">
+                            <!-- Populated by JS -->
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <div class="control-group">
+                        <label for="src-site">変換元サイト (From)</label>
+                        <select id="src-site"></select>
+                    </div>
+                    <div class="control-group arrow-icon">
+                        <span>➜</span>
+                    </div>
+                    <div class="control-group">
+                        <label for="tgt-site">変換先サイト (To)</label>
+                        <select id="tgt-site"></select>
+                    </div>
+                </div>
+
+                <div class="editor-container">
+                    <textarea id="input-html" placeholder="ここに変換元の記事HTMLを貼り付けてください..."></textarea>
+                </div>
+
+                <div class="actions">
+                    <button id="btn-convert" class="btn-primary">変換を実行する</button>
+                    <div id="status-msg" class="status-msg"></div>
+                </div>
+            </section>
+
+            <!-- Right Column: Result -->
+            <section class="panel output-panel">
+                <div class="panel-header">
+                    <h2>変換結果 (Result)</h2>
+                    <div class="panel-actions">
+                        <button id="btn-copy" class="btn-secondary">HTMLをコピー</button>
+                    </div>
+                </div>
+
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="preview">差分確認 (コード)</button>
+                    <button class="tab-btn" data-tab="code">Rawコード</button>
+                </div>
+
+                <div class="tab-content active" id="tab-preview">
+                    <!-- Changed from simple div to pre for code view -->
+                    <pre id="preview-container"
+                        class="preview-box code-view"><div class="placeholder-text">ここに変換結果が表示されます...</div></pre>
+                </div>
+                <div class="tab-content" id="tab-code">
+                    <textarea id="output-html" readonly></textarea>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="migration_engine.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
