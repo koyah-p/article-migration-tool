@@ -23,18 +23,32 @@ document.addEventListener('DOMContentLoaded', () => {
     let registry = { sites: [] }; // Initial empty structure
     let engine = new MigrationEngine();
 
-    // Load Registry
+    // Load Registry with Merge Strategy
     fetch('resources/parts_registry.json')
         .then(res => res.json())
-        .then(data => {
-            // Priority: LocalStorage > JSON Defaults
-            if (!loadRegistry()) {
-                registry = data;
-                saveRegistry(); // Save initial defaults
+        .then(serverData => {
+            // 1. Base is Server Data
+            registry = serverData;
+
+            // 2. Merge with Local Custom Sites
+            const localSites = loadLocalCustomSites();
+            if (localSites.length > 0) {
+                // Determine which are truly new (avoid duplicates if ID conflict?)
+                // Custom sites have 'custom_' prefix usually.
+                localSites.forEach(lSite => {
+                    // Check if ID already exists in server config
+                    const exists = registry.sites.find(s => s.id === lSite.id);
+                    if (!exists) {
+                        registry.sites.push(lSite);
+                    }
+                });
             }
 
+            // 3. Save the MERGED state to local storage (so it's current)
+            saveRegistry();
+
             updateUI();
-            statusMsg.textContent = "準備完了";
+            statusMsg.textContent = "準備完了 (共通設定 + 個人設定)";
 
             // Set Defaults if nothing selected
             if (findSiteId('mf') && !srcSelect.value) srcSelect.value = 'mf';
@@ -42,10 +56,10 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(err => {
             console.error(err);
-            // Even if fetch fails, try storage
-            if (loadRegistry()) {
+            // Fallback: Full Local Storage
+            if (loadFullRegistryFromStorage()) {
                 updateUI();
-                statusMsg.textContent = "保存された設定を読み込みました (初期ファイル読込失敗)";
+                statusMsg.textContent = "保存された設定を読み込みました (サーバ接続失敗)";
             } else {
                 statusMsg.textContent = "設定ファイルの読み込みに失敗しました";
             }
@@ -125,28 +139,34 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Persistence
+    // Persistence Helpers
     function saveRegistry() {
         localStorage.setItem('migration_tool_sites', JSON.stringify(registry.sites));
     }
 
-    function loadRegistry() {
+    function loadLocalCustomSites() {
+        const stored = localStorage.getItem('migration_tool_sites');
+        if (!stored) return [];
+        try {
+            const parsed = JSON.parse(stored);
+            // Filter only "Custom" sites created by user (starting with custom_)
+            // This ensures we don't accidentally override "updated" server sites with "old" local versions
+            // UNLESS we want to support local overrides.
+            // For now, "Merge Additions" is safer usage.
+            return parsed.filter(s => s.id && s.id.startsWith('custom_'));
+        } catch (e) {
+            console.error("Storage parse error", e);
+            return [];
+        }
+    }
+
+    function loadFullRegistryFromStorage() {
         const stored = localStorage.getItem('migration_tool_sites');
         if (stored) {
             try {
-                const parsed = JSON.parse(stored);
-                // We should merge with defaults? Or just use stored?
-                // If we use stored, we might miss updates to the JSON file.
-                // Strategy: Load JSON defaults, then merge "Custom" sites from Text?
-                // Or simply: If localStorage exists, USE IT ENTIRELY (User has full control).
-                // But if user deletes everything, they might want defaults back.
-                // Let's Just Append "Custom" ones? No, user might want to delete defaults.
-                // Simple: Use Stored.
-                registry.sites = parsed;
+                registry.sites = JSON.parse(stored);
                 return true;
-            } catch (e) {
-                console.error("Storage parse error", e);
-                return false;
-            }
+            } catch (e) { return false; }
         }
         return false;
     }
@@ -219,6 +239,21 @@ document.addEventListener('DOMContentLoaded', () => {
         reader.readAsText(file);
     });
 
+    // Export JSON
+    document.getElementById('btn-export-json').addEventListener('click', () => {
+        const jsonStr = JSON.stringify(registry, null, 2);
+        const blob = new Blob([jsonStr], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'parts_registry.json';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    });
+
     // Convert Action
     btnConvert.addEventListener('click', () => {
         if (!registry) return;
@@ -250,12 +285,59 @@ document.addEventListener('DOMContentLoaded', () => {
             outputArea.value = result.code;
             previewArea.innerHTML = result.preview;
 
-            statusMsg.textContent = "完了しました";
+            // Render Report
+            renderMissingReport(result.missing);
+
+            // Switch to Report tab if there are issues? No, let user decide.
+            // But maybe show a badge count? (Enhancement for later)
+            if (result.missing && result.missing.length > 0) {
+                statusMsg.textContent = `完了しました (未変換: ${result.missing.length}件)`;
+            } else {
+                statusMsg.textContent = "完了しました";
+            }
+
         } catch (e) {
             console.error(e);
             statusMsg.textContent = "変換中にエラーが発生しました";
         }
     });
+
+    function renderMissingReport(missingList) {
+        const container = document.getElementById('missing-parts-container');
+        if (!missingList || missingList.length === 0) {
+            container.innerHTML = '<p style="color:#10b981;">未変換のパーツはありません。全て正常に処理されました。</p>';
+            return;
+        }
+
+        const table = document.createElement('table');
+        table.style.width = '100%';
+        table.style.borderCollapse = 'collapse';
+        table.style.fontSize = '0.85rem';
+
+        // Header
+        const thead = document.createElement('thead');
+        thead.innerHTML = `
+            <tr style="background:#f1f5f9; text-align:left;">
+                <th style="padding:8px; border:1px solid #cbd5e1;">パーツ名</th>
+                <th style="padding:8px; border:1px solid #cbd5e1;">パターン (Source)</th>
+            </tr>
+        `;
+        table.appendChild(thead);
+
+        const tbody = document.createElement('tbody');
+        missingList.forEach(item => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td style="padding:8px; border:1px solid #e2e8f0; font-weight:bold;">${item.name}</td>
+                <td style="padding:8px; border:1px solid #e2e8f0; font-family:monospace; word-break:break-all;">${item.pattern.replace(/</g, '&lt;')}</td>
+            `;
+            tbody.appendChild(tr);
+        });
+        table.appendChild(tbody);
+
+        container.innerHTML = '';
+        container.appendChild(table);
+    }
 
     // Copy Action
     btnCopy.addEventListener('click', () => {
