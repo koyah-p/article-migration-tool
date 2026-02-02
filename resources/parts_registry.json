@@ -1,555 +1,7 @@
 {
   "sites": [
     {
-      "id": "custom_1770002916608",
-      "name": "MFビューティー",
-      "parts": [
-        {
-          "name": "大見出し",
-          "pattern": "<h2>{{content}}</h2>"
-        },
-        {
-          "name": "大見出し (Simple)",
-          "pattern": "<h2>{{content}}</h2>"
-        },
-        {
-          "name": "小見出し (h3)",
-          "pattern": "<h3>{{content}}</h3>"
-        },
-        {
-          "name": "小見出し (h4)",
-          "pattern": "<h4>{{content}}</h4>"
-        },
-        {
-          "name": "見出しパーツ (subttl)",
-          "pattern": "<div class=\"subttl\" data-type=\"title\">{{content}}</div>"
-        },
-        {
-          "name": "文字装飾 (Blue)",
-          "pattern": "<span class=\"blue\">{{content}}</span>"
-        },
-        {
-          "name": "文字装飾 (Red)",
-          "pattern": "<span class=\"red\">{{content}}</span>"
-        },
-        {
-          "name": "文字装飾 (Caution)",
-          "pattern": "<span class=\"caution\">{{content}}</span>"
-        },
-        {
-          "name": "文字装飾 (Bold)",
-          "pattern": "<span class=\"b\">{{content}}</span>"
-        },
-        {
-          "name": "文字装飾 (Marker Blue)",
-          "pattern": "<span class=\"marker-blue\">{{content}}</span>"
-        },
-        {
-          "name": "文字装飾 (Marker Red)",
-          "pattern": "<span class=\"marker-red\">{{content}}</span>"
-        },
-        {
-          "name": "コンテンツ幅100%画像",
-          "pattern": "<div class=\"img-100\">\n{{content}}\n</div>"
-        },
-        {
-          "name": "テーブル",
-          "pattern": "<table class=\"table\">\n{{content}}\n</table>"
-        },
-        {
-          "name": "シンプルボックス",
-          "pattern": "<div class=\"simple-box\">\n    {{content}}\n</div>"
-        },
-        {
-          "name": "シンプルボックス (グレー)",
-          "pattern": "<div class=\"gray-box\">\n        {{content}}\n</div>"
-        },
-        {
-          "name": "シンプルボックスタイトル",
-          "pattern": "<p class=\"box-ttl\">{{content}}</p>"
-        },
-        {
-          "name": "番号付き見出しありのテキストボックス",
-          "pattern": "<div class=\"gray-box\">\n    <p class=\"box-ttl\"><span class=\"num\">{{num}}</span>{{title}}</p>\n    {{content}}\n</div>"
-        },
-        {
-          "name": "番号付きリスト",
-          "pattern": "<ol>\n{{content}}\n</ol>"
-        },
-        {
-          "name": "番号なしリスト",
-          "pattern": "<ul>\n{{content}}\n</ul>"
-        },
-        {
-          "name": "チェックリスト",
-          "pattern": "<div class=\"checkList-box\">\n     <ul class=\"checkList-ul\">\n        {{content}}\n     </ul>\n</div>"
-        },
-        {
-          "name": "説明リスト",
-          "pattern": "<dl class=\"info-list\">\n{{content}}\n</dl>"
-        },
-        {
-          "name": "画像左パーツ (Flex)",
-          "pattern": "<div class=\"flex-box\">\n    <img src=\"{{img_src}}\" alt=\"{{alt}}\">\n    <div class=\"flex-text\">\n        {{content}}\n    </div>\n</div>"
-        },
-        {
-          "name": "画像左パーツ (Float)",
-          "pattern": "<div class=\"float-box\">\n    <img src=\"{{img_src}}\" alt=\"{{alt}}\">\n    <div class=\"float-txt\">\n        {{content}}\n    </div>\n</div>"
-        },
-        {
-          "name": "下矢印",
-          "pattern": "<div class=\"arrow-b\"></div>"
-        },
-        {
-          "name": "下矢印 (Min)",
-          "pattern": "<div class=\"arrow-b-min\"></div>"
-        },
-        {
-          "name": "引用パーツ",
-          "pattern": "<blockquote class=\"quote\">\n    <div class=\"quote-img\">\n        <img src=\"{{img_src}}\" alt=\"{{alt}}\">\n    </div>\n    <p>{{content}}</p>\n    <p class=\"right-link\">引用：<a href=\"{{url}}\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">{{source_name}}</a></p>\n</blockquote>"
-        },
-        {
-          "name": "吹き出しタイトル",
-          "pattern": "<div class=\"fukidashi\">{{content}}</div>"
-        },
-        {
-          "name": "まとめボックス",
-          "pattern": "<div class=\"summary\">\n    <div class=\"summary-ttl\">{{title}}</div>\n    <p>{{content}}</p>\n</div>"
-        },
-        {
-          "name": "調査概要ボックス",
-          "pattern": "<div class=\"research\">\n    <div class=\"research-ttl\">{{title}}</div>\n    <ul>\n        {{content}}\n    </ul>\n</div>"
-        },
-        {
-          "name": "補足用ボックス",
-          "pattern": "<div class=\"mininote\">\n    <div class=\"mininote-ttl\">{{title}}</div>\n    <div class=\"mininote-txt\">\n        {{content}}\n    </div>\n</div>"
-        },
-        {
-          "name": "右寄せリンク",
-          "pattern": "<div class=\"right-link__icon\">{{link}}</div>"
-        },
-        {
-          "name": "右寄せリンク（p）",
-          "pattern": "<p class=\"right-link__icon\">{{link}}</p>"
-        },
-        {
-          "name": "CTAボタン",
-          "pattern": "<div class=\"btn\">\n    {{link}}\n    <span class=\"arrow\"></span>\n</div>"
-        },
-        {
-          "name": "タグ (Left)",
-          "pattern": "<ul class=\"tag\">\n    {{content}}\n</ul>"
-        },
-        {
-          "name": "タグ (Center)",
-          "pattern": "<ul class=\"tag center\">\n    {{content}}\n</ul>"
-        },
-        {
-          "name": "タグ (on)",
-          "pattern": "<li class=\"item on\">{{content}}</li>"
-        },
-        {
-          "name": "タグ (off)",
-          "pattern": "<li class=\"item\">{{content}}</li>"
-        },
-        {
-          "name": "スクロールテーブル",
-          "pattern": "<div class=\"table-scroll\">\n    <table class=\"table\">\n        {{content}}\n    </table>\n</div>"
-        },
-        {
-          "name": "スティッキー付きテーブル（縦）",
-          "pattern": "<table class=\"table sticky-top\">\n    {{content}}\n</table>"
-        },
-        {
-          "name": "スティッキー付きテーブル（横）",
-          "pattern": "<div class=\"table-scroll\">\n    <table class=\"table sticky-left\">\n        {{content}}\n    </table>\n</div>"
-        },
-        {
-          "name": "ジャンプパーツ",
-          "pattern": "<ul class=\"jumpMenu\">\n    {{content}}\n</ul>"
-        },
-        {
-          "name": "ジャンプパーツ内部",
-          "pattern": "<li class=\"item\">{{content}}</li>"
-        },
-        {
-          "name": "リストパーツ：１",
-          "pattern": "<ul class=\"list_01\">\n    {{content}}\n</ul>"
-        },
-        {
-          "name": "リストパーツ：１内部",
-          "pattern": "<li class=\"list_01-item\">{{content}}</li>"
-        },
-        {
-          "name": "リストパーツ：２",
-          "pattern": "<ul class=\"list_02\">\n    {{content}}\n</ul>"
-        },
-        {
-          "name": "リストパーツ：２内部",
-          "pattern": "<li class=\"list_02-item\">{{content}}</li>"
-        },
-        {
-          "name": "ランキングパーツ",
-          "pattern": "<div class=\"name-area\">\n    <p class=\"name-text\">{{sub_text}}</p>\n    <a href=\"{{url}}\">\n        <span class=\"b\">\n            <p class=\"name\">{{name}}</p>\n        </span>\n    </a>\n</div>"
-        },
-        {
-          "name": "ステップパーツ",
-          "pattern": "<div class=\"step-wrap\">\n    {{content}}\n</div>"
-        },
-        {
-          "name": "ステップパーツ内部",
-          "pattern": "<div class=\"step\">\n    <p class=\"step-ttl\">{{title}}</p>\n    <div class=\"step-block\">\n        {{content}}\n    </div>\n</div>"
-        },
-        {
-          "name": "ナンバリングパーツ",
-          "pattern": "<ol class=\"numbering-area\">\n    {{content}}\n</ol>"
-        },
-        {
-          "name": "ナンバリングリストアイテム",
-          "pattern": "<li>\n    <p class=\"numbering-ttl\">\n        <span class=\"numbering-num\"></span>\n        <span class=\"b\">{{title}}</span>\n    </p>\n    <div class=\"numbering-block\">\n        {{content}}\n    </div>\n</li>"
-        },
-        {
-          "name": "関連記事パーツ",
-          "pattern": "<div class=\"relatedpost\">\n    <p class=\"relatedpost-ttl\">{{title}}</p>\n    <div class=\"relatedpost-wrap\">\n        {{content}}\n    </div>\n</div>"
-        },
-        {
-          "name": "関連記事内部",
-          "pattern": "<div class=\"relatedpost-post\">\n    <a href=\"{{link}}\">\n        <div class=\"image_wrap\"><img width=\"660\" height=\"408\" decoding=\"async\" src=\"{{img_src}}\" alt=\"{{alt}}\"></div>\n        <p class=\"relatedpost-post-ttl\">{{title}}</p>\n    </a>\n</div>"
-        },
-        {
-          "name": "Q＆Aパーツ",
-          "pattern": "<div class=\"faq-wrap\">\n    {{content}}\n</div>"
-        },
-        {
-          "name": "Q＆Aパーツ内部",
-          "pattern": "<dl class=\"faq\">\n    <dt class=\"faqQ\">\n    <span class=\"faqQ-icon\">Q</span>\n      <div itemprop=\"name\">{{question}}</div>\n<span class=\"faq-btn\"></span>\n    </dt>\n    <dd class=\"faqA\" itemprop=\"acceptedAnswer\" itemscope itemtype=\"https://schema.org/Answer\">\n      <div itemprop=\"text\">\n{{answer}}</div>\n    </dd>\n  </dl>"
-        },
-        {
-          "name": "Q＆Aパーツ（ショートコード）",
-          "pattern": "[qa-box01-wrap]\n{{content}}\n[/qa-box01-wrap]"
-        },
-        {
-          "name": "Q＆Aパーツ内部（ショートコード）",
-          "pattern": "[qa-box01 title=\"{{question}}\"]\n{{answer}}\n[/qa-box01]"
-        },
-        {
-          "name": "タブ切り替えパーツ",
-          "pattern": "<div class=\"tab-section\">\n    <ul class=\"tab-list\">\n        {{tabs}}\n    </ul>\n    <div class=\"tab-item\">\n        {{content}}\n    </div>\n</div>"
-        },
-        {
-          "name": "メリットパーツ",
-          "pattern": "<div class=\"merideme\" data-type=\"merit\">\n    <div class=\"merideme-ttl\">{{title}}</div>\n    <ul class=\"merideme-list\">\n        {{content}}\n    </ul>\n</div>"
-        },
-        {
-          "name": "デメリットパーツ",
-          "pattern": "<div class=\"merideme\" data-type=\"demerit\">\n    <div class=\"merideme-ttl\">{{title}}</div>\n    <ul class=\"merideme-list\">\n        {{content}}\n    </ul>\n</div>"
-        },
-        {
-          "name": "マップ",
-          "pattern": "<div class=\"map\">\n    <div class=\"map-ttl\">{{title}}</div>\n    <div class=\"map-inner\">\n        <iframe src=\"{{url}}\" width=\"{{width}}\" height=\"{{height}}\" style=\"{{style}}\" allowfullscreen=\"\" loading=\"lazy\"></iframe>\n    </div>\n</div>"
-        },
-        {
-          "name": "住所リスト",
-          "pattern": "<div class=\"addressAcco\">\n    {{content}}\n</div>"
-        },
-        {
-          "name": "レビューパーツ",
-          "pattern": "<div class=\"scroll-wrap\">\n    {{content}}\n</div>"
-        },
-        {
-          "name": "レビューパーツ内部（男性）",
-          "pattern": "<div class=\"comment\">\n    <div class=\"comment-top\">\n       <div class=\"comment-profile\">\n          <span class=\"comment-icon-m\"></span>\n          <div class=\"comment-name\">{{person}}</div>\n        </div>\n        <ul class=\"comment-plan\">\n          <li><span>{{label1}}</span>{{label1-contents}}</li>\n          <li><span>{{label2}}</span>{{label2-contents}}</li>\n          <li><span>{{label3}}</span>{{label3-contents}}</li>\n        </ul>\n      </div>\n      <div class=\"comment-bottom\">\n        <div class=\"right-box\">\n          {{content}}\n        </div>\n      </div>\n</div>"
-        },
-        {
-          "name": "レビューパーツ内部（女性）",
-          "pattern": "<div class=\"comment\">\n    <div class=\"comment-top\">\n       <div class=\"comment-profile\">\n          <span class=\"comment-icon-w\"></span>\n          <div class=\"comment-name\">{{person}}</div>\n        </div>\n        <ul class=\"comment-plan\">\n          <li><span>{{label1}}</span>{{label1-contents}}</li>\n          <li><span>{{label2}}</span>{{label2-contents}}</li>\n          <li><span>{{label3}}</span>{{label3-contents}}</li>\n        </ul>\n      </div>\n      <div class=\"comment-bottom\">\n        <div class=\"right-box\">\n          {{content}}\n        </div>\n      </div>\n</div>"
-        },
-        {
-          "name": "ポジションマップパーツ",
-          "pattern": "<div class=\"positioning\">\n    <div class=\"positioning-top\">\n        {{header_content}}\n    </div>\n    <div class=\"positioning-inner\">\n        {{map_content}}\n    </div>\n</div>"
-        },
-        {
-          "name": "ランキングパーツ (Rank Icon)",
-          "pattern": "<div class=\"name-area\">\n    {{content}}\n</div>"
-        },
-        {
-          "name": "ランキングパーツ (copy)",
-          "pattern": "<p class=\"name-text\">{{sub_text}}</p>"
-        },
-        {
-          "name": "画像横スクロール",
-          "pattern": "<div class=\"scrollBoxImg\">\n    <div class=\"scrollBoxImg-wrap\">\n        <ul class=\"scrollBoxImg-list\">\n            {{content}}\n        </ul>\n    </div>\n</div>"
-        },
-        {
-          "name": "横スクロール発生させるためのパーツ",
-          "pattern": "<div class=\"scroll-x\">\n    {{content}}\n</div>"
-        },
-        {
-          "name": "スライドトグルのパーツ",
-          "pattern": "<div class=\"toggleSection-wrap\">\n    {{content}}\n</div>"
-        },
-        {
-          "name": "アコーディオン",
-          "pattern": "<div class=\"accordion\">\n    {{content}}\n</div>"
-        },
-        {
-          "name": "シミュレーションパーツ",
-          "pattern": "<div class=\"simulation\">\n    {{content}}\n</div>"
-        }
-      ]
-    },
-    {
-      "id": "custom_1770005397028",
-      "name": "メディフェイス",
-      "parts": [
-        {
-          "name": "大見出し",
-          "pattern": "<h2>{{content}}</h2>"
-        },
-        {
-          "name": "大見出し (Simple)",
-          "pattern": "<h2>{{content}}</h2>"
-        },
-        {
-          "name": "小見出し (h3)",
-          "pattern": "<h3>{{content}}</h3>"
-        },
-        {
-          "name": "小見出し (h4)",
-          "pattern": "<h4>{{content}}</h4>"
-        },
-        {
-          "name": "見出しパーツ (subttl)",
-          "pattern": "<div class=\"sub-ttl\">{{content}}</div>"
-        },
-        {
-          "name": "チェックマーク付き見出し (subttl)",
-          "pattern": "<div class=\"check-ttl\">{{content}}</div>"
-        },
-        {
-          "name": "数字付き見出し (subttl)",
-          "pattern": "<div class=\"num-ttl\"><span class=\"num-ttl_num\">{{number}}</span>{{content}}</div>"
-        },
-        {
-          "name": "文字装飾 (Blue)",
-          "pattern": "<span class=\"blue\">{{content}}</span>"
-        },
-        {
-          "name": "文字装飾 (Red)",
-          "pattern": "<span class=\"green\">{{content}}</span>"
-        },
-        {
-          "name": "文字装飾 (Caution)",
-          "pattern": "<span class=\"caution\">{{content}}</span>"
-        },
-        {
-          "name": "文字装飾 (Bold)",
-          "pattern": "<span class=\"bold\">{{content}}</span>"
-        },
-        {
-          "name": "文字装飾 (Marker Blue)",
-          "pattern": "<span class=\"marker\">{{content}}</span>"
-        },
-        {
-          "name": "コンテンツ幅100%画像",
-          "pattern": "<div class=\"full-img\">\n{{content}}\n</div>"
-        },
-        {
-          "name": "テーブル",
-          "pattern": "<table class=\"table\">\n{{content}}\n</table>"
-        },
-        {
-          "name": "シンプルボックス",
-          "pattern": "<div class=\"textbox box\">\n    {{content}}\n</div>"
-        },
-        {
-          "name": "シンプルボックス2",
-          "pattern": "<div class=\"textbox box boder-grn\">\n    {{content}}\n</div>"
-        },
-        {
-          "name": "シンプルボックス (グレー)",
-          "pattern": "<div class=\"textbox box\" data-bg=\"gray\">\n        {{content}}\n</div>"
-        },
-        {
-          "name": "番号付き見出しありのテキストボックス",
-          "pattern": "<div class=\"textbox box\" data-bg=\"blue\">\n    <div class=\"num-ttl\"><span class=\"num-ttl_num\">{{num}}</span>{{title}}</div>\n        {{content}}\n</div>"
-        },
-        {
-          "name": "番号付きリスト",
-          "pattern": "<ol>\n{{content}}\n</ol>"
-        },
-        {
-          "name": "番号なしリスト",
-          "pattern": "<ul>\n{{content}}\n</ul>"
-        },
-        {
-          "name": "チェックリスト",
-          "pattern": "<ul class=\"check-list\">\n    {{content}}\n</ul>"
-        },
-        {
-          "name": "説明リスト",
-          "pattern": "<dl class=\"info-list\">\n{{content}}\n</dl>"
-        },
-        {
-          "name": "画像左パーツ (Flex)",
-          "pattern": "<div class=\"flex\">\n    <img loading=\"lazy\" decoding=\"async\" src=\"{{img_src}}\" alt=\"{{alt}}\">\n    <div class=\"flex-right\">\n        {{content}}\n    </div>\n</div>"
-        },
-        {
-          "name": "画像左パーツ (Float)",
-          "pattern": "<div class=\"float\">\n    <img loading=\"lazy\" decoding=\"async\" src=\"{{img_src}}\" alt=\"{{alt}}\">\n    <div class=\"float-right\">\n        {{content}}\n    </div>\n</div>"
-        },
-        {
-          "name": "下矢印",
-          "pattern": "<div class=\"arrow-down\"></div>"
-        },
-        {
-          "name": "下矢印 (Min)",
-          "pattern": "<div class=\"arrow-down_min\"></div>"
-        },
-        {
-          "name": "引用パーツ",
-          "pattern": "<blockquote class=\"quote box\" data-bg=\"gray\">\n    <p>{{content}}</p>\n    <p class=\"link-right\"><span class=\"text-min\">引用：<a href=\"{{url}}\" rel=\"nofollow noopener noreferrer\" target=\"_blank\">{{source_name}}</a></span></p>\n</blockquote>"
-        },
-        {
-          "name": "吹き出しタイトル",
-          "pattern": "<div class=\"fukidashi\">{{content}}</div>"
-        },
-        {
-          "name": "まとめボックス",
-          "pattern": "<div class=\"matome box\" data-bg=\"blue\">\n    <div class=\"matome-ttl\">{{title}}</div>\n    <div class=\"matome-inner\">\n        <p>{{content}}</p>\n    </div>\n</div>"
-        },
-        {
-          "name": "調査概要ボックス",
-          "pattern": "<div class=\"survey box\" data-bg=\"gray\">\n    <div class=\"survey-ttl\">{{title}}</div>\n    <div class=\"survey-inner\">\n        <ul>\n            {{content}}\n        </ul>\n    </div>\n</div>"
-        },
-        {
-          "name": "補足用ボックス",
-          "pattern": "<div class=\"minTextbox box\" data-bg=\"gray\">\n    <div class=\"minTextbox-ttl\">{{title}}</div>\n    <div class=\"minTextbox-inner\">\n        {{content}}\n    </div>\n</div>"
-        },
-        {
-          "name": "右寄せリンク",
-          "pattern": "<div class=\"link-right_icon\">{{link}}</div>"
-        },
-        {
-          "name": "右寄せリンク（p）",
-          "pattern": "<p class=\"link-right_icon\">{{link}}</p>"
-        },
-        {
-          "name": "CTAボタン",
-          "pattern": "<div class=\"c-btn\">\n{{link}}\n</div>"
-        },
-        {
-          "name": "タグ (Left)",
-          "pattern": "<ul class=\"tag\">\n    {{content}}\n</ul>"
-        },
-        {
-          "name": "タグ (on)",
-          "pattern": "<li class=\"item on\">{{content}}</li>"
-        },
-        {
-          "name": "タグ (off)",
-          "pattern": "<li class=\"item\">{{content}}</li>"
-        },
-        {
-          "name": "スクロールテーブル",
-          "pattern": "<div class=\"scroll-x\">\n    <table class=\"table\">\n        {{content}}\n    </table>\n</div>"
-        },
-        {
-          "name": "ジャンプパーツ",
-          "pattern": "<ul class=\"jump\">\n    {{content}}\n</ul>"
-        },
-        {
-          "name": "ジャンプパーツ内部",
-          "pattern": "<li class=\"item\">{{content}}</li>"
-        },
-        {
-          "name": "ランキングパーツ",
-          "pattern": "<div class=\"pickup-ttl\">\n    <span class=\"pickup-ttl_txt\">{{sub_text}}</span>\n    <a href=\"{{url}}\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">{{name}}</a>\n</div>"
-        },
-        {
-          "name": "ステップパーツ",
-          "pattern": "<div class=\"flow\">\n    {{content}}\n</div>"
-        },
-        {
-          "name": "ステップパーツ内部",
-          "pattern": "<div class=\"flow-wrap\">\n    <div class=\"flow-box\">\n        <span class=\"step\">STEP</span>\n        <span class=\"num\">{{num}}</span>\n    </div>\n    <div class=\"flow-inner\">\n        <div class=\"flow-ttl\">{{title}}</div>\n        {{content}}\n    </div>\n</div>"
-        },
-        {
-          "name": "ナンバリングパーツ",
-          "pattern": "<div class=\"numbering\">\n    {{content}}\n</div>"
-        },
-        {
-          "name": "ナンバリングリストアイテム",
-          "pattern": "<div class=\"numbering-wrap\">\n    <div class=\"numbering-ttl\">\n        <span class=\"numbering-num\">{{num}}</span>\n        <span>{{title}}</span>\n    </div>\n    <div class=\"numbering-inner\">\n        {{content}}\n    </div>\n</div>"
-        },
-        {
-          "name": "関連記事パーツ",
-          "pattern": "<div class=\"pickupPost\">\n    <div class=\"pickupPost-head\">{{title}}</div>\n    <div class=\"pickupPost-wrap\">\n        {{content}}\n    </div>\n</div>"
-        },
-        {
-          "name": "関連記事内部",
-          "pattern": "<div class=\"pickupPost-post\">\n    <a href=\"{{link}}\">\n        <div class=\"pickupPost-img\"><img width=\"660\" height=\"408\" decoding=\"async\" src=\"{{img_src}}\" alt=\"{{alt}}\"></div>\n        <p class=\"pickupPost-ttl\">{{title}}</p>\n    </a>\n</div>"
-        },
-        {
-          "name": "Q＆Aパーツ",
-          "pattern": "<div class=\"faq-wrap\">\n    {{content}}\n</div>"
-        },
-        {
-          "name": "Q＆Aパーツ内部",
-          "pattern": "<dl class=\"faq\">\n    <dt class=\"faqQ\">\n      <div>{{question}}</div>\n      <span class=\"faqQ-btn\"></span>\n    </dt>\n    <dd class=\"faqA\">\n      <div itemprop=\"text\">\n      {{answer}}\n</div>\n    </dd>\n  </dl>"
-        },
-        {
-          "name": "Q＆Aパーツ（ショートコード）",
-          "pattern": "[qa-box01-wrap]\n{{content}}\n[/qa-box01-wrap]"
-        },
-        {
-          "name": "Q＆Aパーツ内部（ショートコード）",
-          "pattern": "[qa-box01 title=\"{{question}}\"]\n{{answer}}\n[/qa-box01]"
-        },
-        {
-          "name": "タブ切り替えパーツ",
-          "pattern": "<div class=\"tab-section\">\n    <ul class=\"tab-list\">\n        {{tabs}}\n    </ul>\n    <div class=\"tab-item\">\n        {{content}}\n    </div>\n</div>"
-        },
-        {
-          "name": "マップ",
-          "pattern": "<div class=\"map\">\n    <div class=\"map-ttl\">{{title}}</div>\n    <div class=\"map-inner\">\n        <iframe src=\"{{url}}\" width=\"{{width}}\" height=\"{{height}}\" style=\"{{style}}\" allowfullscreen=\"\" loading=\"lazy\"></iframe>\n    </div>\n</div>"
-        },
-        {
-          "name": "住所リスト",
-          "pattern": "<div class=\"addressAcco\">\n    {{content}}\n</div>"
-        },
-        {
-          "name": "レビューパーツ",
-          "pattern": "<div class=\"review-wrap\">\n    {{content}}\n</div>"
-        },
-        {
-          "name": "レビューパーツ内部（男性）",
-          "pattern": "<div class=\"review-content\">\n      <div class=\"review-profile\">\n        <div class=\"review-block\">\n          <div class=\"review-img man\"></div>\n          <div class=\"review-name\">{{person}}</div>\n        </div>\n        <ul class=\"review-plan\">\n          <li><span>{{label1}}</span>{{label1-contents}}</li>\n          <li><span>{{label2}}</span>{{label2-contents}}</li>\n          <li><span>{{label3}}</span>{{label3-contents}}</li>\n        </ul>\n      </div>\n      <div class=\"review-comment\">\n        <div class=\"review-right\">\n          {{content}}\n        </div>\n      </div>\n</div>"
-        },
-        {
-          "name": "レビューパーツ内部（女性）",
-          "pattern": "<div class=\"review-content\">\n      <div class=\"review-profile\">\n        <div class=\"review-block\">\n          <div class=\"review-img woman\"></div>\n          <div class=\"review-name\">{{person}}</div>\n        </div>\n        <ul class=\"review-plan\">\n          <li><span>{{label1}}</span>{{label1-contents}}</li>\n          <li><span>{{label2}}</span>{{label2-contents}}</li>\n          <li><span>{{label3}}</span>{{label3-contents}}</li>\n        </ul>\n      </div>\n      <div class=\"review-comment\">\n        <div class=\"review-right\">\n          {{content}}\n        </div>\n      </div>\n</div>"
-        },
-        {
-          "name": "ポジションマップパーツ",
-          "pattern": "<div class=\"pmap\">\n    <div class=\"pmap-ttlbox\">\n      {{header_content}}\n    </div>\n    <div class=\"pmap-inner\">\n      <div class=\"pmap-bg\"\n        style=\"background: url([url]/wp-content/uploads/2025/06/positioningmap_bg.png) no-repeat center / 100% auto\">\n      </div>\n      <div class=\"pmap-wrap\">\n        {{map_content}}\n      </div>\n    </div>\n</div>"
-        },
-        {
-          "name": "ランキングパーツ (Rank Icon)",
-          "pattern": "<div class=\"pickup-ttl\">\n    {{content}}\n</div>"
-        },
-        {
-          "name": "ランキングパーツ (copy)",
-          "pattern": "<span class=\"pickup-ttl_txt\">{{sub_text}}</span>"
-        },
-        {
-          "name": "監修者パーツ",
-          "pattern": "<div class=\"writerBox\" itemscope itemtype=\"https://schema.org/Person\">\n  <span class=\"border\"></span>\n  <div class=\"writerBox-wrap\">\n    <div class=\"ttl\">監修者</div>\n    <div class=\"writerBox-inner\">\n      <figure class=\"writerBox-img b-radius\">\n        <img decoding=\"async\" src=\"{{img_src}}\" alt=\"著者画像\" itemprop=\"image\">\n      </figure>\n      <span class=\"inner-border\"></span>\n      <div class=\"profile\">\n        {{content}}\n      </div>\n    </div>\n  </div>\n</div>"
-        }
-      ]
-    },
-    {
-      "id": "custom_1770015646260",
+      "id": "custom_1770017639553",
       "name": "麻布十番",
       "parts": [
         {
@@ -819,9 +271,275 @@
       ]
     },
     {
-      "id": "custom_1770015655594",
+      "id": "custom_1770017648547",
+      "name": "メディフェイス",
+      "parts": [
+        {
+          "name": "画像パス",
+          "pattern": "https://medi-face.co.jp/media/assets/uploads/{{name}}"
+        },
+        {
+          "name": "メタリフ",
+          "pattern": "https://medi-face.co.jp/media/assets/click/{{name}}"
+        },
+        {
+          "name": "大見出し",
+          "pattern": "<h2>{{content}}</h2>"
+        },
+        {
+          "name": "大見出し (Simple)",
+          "pattern": "<h2>{{content}}</h2>"
+        },
+        {
+          "name": "小見出し (h3)",
+          "pattern": "<h3>{{content}}</h3>"
+        },
+        {
+          "name": "小見出し (h4)",
+          "pattern": "<h4>{{content}}</h4>"
+        },
+        {
+          "name": "見出しパーツ (subttl)",
+          "pattern": "<div class=\"sub-ttl\">{{content}}</div>"
+        },
+        {
+          "name": "チェックマーク付き見出し (subttl)",
+          "pattern": "<div class=\"check-ttl\">{{content}}</div>"
+        },
+        {
+          "name": "数字付き見出し (subttl)",
+          "pattern": "<div class=\"num-ttl\"><span class=\"num-ttl_num\">{{number}}</span>{{content}}</div>"
+        },
+        {
+          "name": "文字装飾 (Blue)",
+          "pattern": "<span class=\"blue\">{{content}}</span>"
+        },
+        {
+          "name": "文字装飾 (Red)",
+          "pattern": "<span class=\"green\">{{content}}</span>"
+        },
+        {
+          "name": "文字装飾 (Caution)",
+          "pattern": "<span class=\"caution\">{{content}}</span>"
+        },
+        {
+          "name": "文字装飾 (Bold)",
+          "pattern": "<span class=\"bold\">{{content}}</span>"
+        },
+        {
+          "name": "文字装飾 (Marker Blue)",
+          "pattern": "<span class=\"marker\">{{content}}</span>"
+        },
+        {
+          "name": "コンテンツ幅100%画像",
+          "pattern": "<div class=\"full-img\">\n{{content}}\n</div>"
+        },
+        {
+          "name": "テーブル",
+          "pattern": "<table class=\"table\">\n{{content}}\n</table>"
+        },
+        {
+          "name": "シンプルボックス",
+          "pattern": "<div class=\"textbox box\">\n    {{content}}\n</div>"
+        },
+        {
+          "name": "シンプルボックス2",
+          "pattern": "<div class=\"textbox box boder-grn\">\n    {{content}}\n</div>"
+        },
+        {
+          "name": "シンプルボックス (グレー)",
+          "pattern": "<div class=\"textbox box\" data-bg=\"gray\">\n        {{content}}\n</div>"
+        },
+        {
+          "name": "番号付き見出しありのテキストボックス",
+          "pattern": "<div class=\"textbox box\" data-bg=\"blue\">\n    <div class=\"num-ttl\"><span class=\"num-ttl_num\">{{num}}</span>{{title}}</div>\n        {{content}}\n</div>"
+        },
+        {
+          "name": "番号付きリスト",
+          "pattern": "<ol>\n{{content}}\n</ol>"
+        },
+        {
+          "name": "番号なしリスト",
+          "pattern": "<ul>\n{{content}}\n</ul>"
+        },
+        {
+          "name": "チェックリスト",
+          "pattern": "<ul class=\"check-list\">\n    {{content}}\n</ul>"
+        },
+        {
+          "name": "説明リスト",
+          "pattern": "<dl class=\"info-list\">\n{{content}}\n</dl>"
+        },
+        {
+          "name": "画像左パーツ (Flex)",
+          "pattern": "<div class=\"flex\">\n    <img loading=\"lazy\" decoding=\"async\" src=\"{{img_src}}\" alt=\"{{alt}}\">\n    <div class=\"flex-right\">\n        {{content}}\n    </div>\n</div>"
+        },
+        {
+          "name": "画像左パーツ (Float)",
+          "pattern": "<div class=\"float\">\n    <img loading=\"lazy\" decoding=\"async\" src=\"{{img_src}}\" alt=\"{{alt}}\">\n    <div class=\"float-right\">\n        {{content}}\n    </div>\n</div>"
+        },
+        {
+          "name": "下矢印",
+          "pattern": "<div class=\"arrow-down\"></div>"
+        },
+        {
+          "name": "下矢印 (Min)",
+          "pattern": "<div class=\"arrow-down_min\"></div>"
+        },
+        {
+          "name": "引用パーツ",
+          "pattern": "<blockquote class=\"quote box\" data-bg=\"gray\">\n    <p>{{content}}</p>\n    <p class=\"link-right\"><span class=\"text-min\">引用：<a href=\"{{url}}\" rel=\"nofollow noopener noreferrer\" target=\"_blank\">{{source_name}}</a></span></p>\n</blockquote>"
+        },
+        {
+          "name": "吹き出しタイトル",
+          "pattern": "<div class=\"fukidashi\">{{content}}</div>"
+        },
+        {
+          "name": "まとめボックス",
+          "pattern": "<div class=\"matome box\" data-bg=\"blue\">\n    <div class=\"matome-ttl\">{{title}}</div>\n    <div class=\"matome-inner\">\n        <p>{{content}}</p>\n    </div>\n</div>"
+        },
+        {
+          "name": "調査概要ボックス",
+          "pattern": "<div class=\"survey box\" data-bg=\"gray\">\n    <div class=\"survey-ttl\">{{title}}</div>\n    <div class=\"survey-inner\">\n        <ul>\n            {{content}}\n        </ul>\n    </div>\n</div>"
+        },
+        {
+          "name": "補足用ボックス",
+          "pattern": "<div class=\"minTextbox box\" data-bg=\"gray\">\n    <div class=\"minTextbox-ttl\">{{title}}</div>\n    <div class=\"minTextbox-inner\">\n        {{content}}\n    </div>\n</div>"
+        },
+        {
+          "name": "右寄せリンク",
+          "pattern": "<div class=\"link-right_icon\">{{link}}</div>"
+        },
+        {
+          "name": "右寄せリンク（p）",
+          "pattern": "<p class=\"link-right_icon\">{{link}}</p>"
+        },
+        {
+          "name": "CTAボタン",
+          "pattern": "<div class=\"c-btn\">\n{{link}}\n</div>"
+        },
+        {
+          "name": "タグ (Left)",
+          "pattern": "<ul class=\"tag\">\n    {{content}}\n</ul>"
+        },
+        {
+          "name": "タグ (on)",
+          "pattern": "<li class=\"item on\">{{content}}</li>"
+        },
+        {
+          "name": "タグ (off)",
+          "pattern": "<li class=\"item\">{{content}}</li>"
+        },
+        {
+          "name": "スクロールテーブル",
+          "pattern": "<div class=\"scroll-x\">\n    <table class=\"table\">\n        {{content}}\n    </table>\n</div>"
+        },
+        {
+          "name": "ジャンプパーツ",
+          "pattern": "<ul class=\"jump\">\n    {{content}}\n</ul>"
+        },
+        {
+          "name": "ジャンプパーツ内部",
+          "pattern": "<li class=\"item\">{{content}}</li>"
+        },
+        {
+          "name": "ランキングパーツ",
+          "pattern": "<div class=\"pickup-ttl\">\n    <span class=\"pickup-ttl_txt\">{{sub_text}}</span>\n    <a href=\"{{url}}\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">{{name}}</a>\n</div>"
+        },
+        {
+          "name": "ステップパーツ",
+          "pattern": "<div class=\"flow\">\n    {{content}}\n</div>"
+        },
+        {
+          "name": "ステップパーツ内部",
+          "pattern": "<div class=\"flow-wrap\">\n    <div class=\"flow-box\">\n        <span class=\"step\">STEP</span>\n        <span class=\"num\">{{num}}</span>\n    </div>\n    <div class=\"flow-inner\">\n        <div class=\"flow-ttl\">{{title}}</div>\n        {{content}}\n    </div>\n</div>"
+        },
+        {
+          "name": "ナンバリングパーツ",
+          "pattern": "<div class=\"numbering\">\n    {{content}}\n</div>"
+        },
+        {
+          "name": "ナンバリングリストアイテム",
+          "pattern": "<div class=\"numbering-wrap\">\n    <div class=\"numbering-ttl\">\n        <span class=\"numbering-num\">{{num}}</span>\n        <span>{{title}}</span>\n    </div>\n    <div class=\"numbering-inner\">\n        {{content}}\n    </div>\n</div>"
+        },
+        {
+          "name": "関連記事パーツ",
+          "pattern": "<div class=\"pickupPost\">\n    <div class=\"pickupPost-head\">{{title}}</div>\n    <div class=\"pickupPost-wrap\">\n        {{content}}\n    </div>\n</div>"
+        },
+        {
+          "name": "関連記事内部",
+          "pattern": "<div class=\"pickupPost-post\">\n    <a href=\"{{link}}\">\n        <div class=\"pickupPost-img\"><img width=\"660\" height=\"408\" decoding=\"async\" src=\"{{img_src}}\" alt=\"{{alt}}\"></div>\n        <p class=\"pickupPost-ttl\">{{title}}</p>\n    </a>\n</div>"
+        },
+        {
+          "name": "Q＆Aパーツ",
+          "pattern": "<div class=\"faq-wrap\">\n    {{content}}\n</div>"
+        },
+        {
+          "name": "Q＆Aパーツ内部",
+          "pattern": "<dl class=\"faq\">\n    <dt class=\"faqQ\">\n      <div>{{question}}</div>\n      <span class=\"faqQ-btn\"></span>\n    </dt>\n    <dd class=\"faqA\">\n      <div itemprop=\"text\">\n      {{answer}}\n</div>\n    </dd>\n  </dl>"
+        },
+        {
+          "name": "Q＆Aパーツ（ショートコード）",
+          "pattern": "[qa-box01-wrap]\n{{content}}\n[/qa-box01-wrap]"
+        },
+        {
+          "name": "Q＆Aパーツ内部（ショートコード）",
+          "pattern": "[qa-box01 title=\"{{question}}\"]\n{{answer}}\n[/qa-box01]"
+        },
+        {
+          "name": "タブ切り替えパーツ",
+          "pattern": "<div class=\"tab-section\">\n    <ul class=\"tab-list\">\n        {{tabs}}\n    </ul>\n    <div class=\"tab-item\">\n        {{content}}\n    </div>\n</div>"
+        },
+        {
+          "name": "マップ",
+          "pattern": "<div class=\"map\">\n    <div class=\"map-ttl\">{{title}}</div>\n    <div class=\"map-inner\">\n        <iframe src=\"{{url}}\" width=\"{{width}}\" height=\"{{height}}\" style=\"{{style}}\" allowfullscreen=\"\" loading=\"lazy\"></iframe>\n    </div>\n</div>"
+        },
+        {
+          "name": "住所リスト",
+          "pattern": "<div class=\"addressAcco\">\n    {{content}}\n</div>"
+        },
+        {
+          "name": "レビューパーツ",
+          "pattern": "<div class=\"review-wrap\">\n    {{content}}\n</div>"
+        },
+        {
+          "name": "レビューパーツ内部（男性）",
+          "pattern": "<div class=\"review-content\">\n      <div class=\"review-profile\">\n        <div class=\"review-block\">\n          <div class=\"review-img man\"></div>\n          <div class=\"review-name\">{{person}}</div>\n        </div>\n        <ul class=\"review-plan\">\n          <li><span>{{label1}}</span>{{label1-contents}}</li>\n          <li><span>{{label2}}</span>{{label2-contents}}</li>\n          <li><span>{{label3}}</span>{{label3-contents}}</li>\n        </ul>\n      </div>\n      <div class=\"review-comment\">\n        <div class=\"review-right\">\n          {{content}}\n        </div>\n      </div>\n</div>"
+        },
+        {
+          "name": "レビューパーツ内部（女性）",
+          "pattern": "<div class=\"review-content\">\n      <div class=\"review-profile\">\n        <div class=\"review-block\">\n          <div class=\"review-img woman\"></div>\n          <div class=\"review-name\">{{person}}</div>\n        </div>\n        <ul class=\"review-plan\">\n          <li><span>{{label1}}</span>{{label1-contents}}</li>\n          <li><span>{{label2}}</span>{{label2-contents}}</li>\n          <li><span>{{label3}}</span>{{label3-contents}}</li>\n        </ul>\n      </div>\n      <div class=\"review-comment\">\n        <div class=\"review-right\">\n          {{content}}\n        </div>\n      </div>\n</div>"
+        },
+        {
+          "name": "ポジションマップパーツ",
+          "pattern": "<div class=\"pmap\">\n    <div class=\"pmap-ttlbox\">\n      {{header_content}}\n    </div>\n    <div class=\"pmap-inner\">\n      <div class=\"pmap-bg\"\n        style=\"background: url([url]/wp-content/uploads/2025/06/positioningmap_bg.png) no-repeat center / 100% auto\">\n      </div>\n      <div class=\"pmap-wrap\">\n        {{map_content}}\n      </div>\n    </div>\n</div>"
+        },
+        {
+          "name": "ランキングパーツ (Rank Icon)",
+          "pattern": "<div class=\"pickup-ttl\">\n    {{content}}\n</div>"
+        },
+        {
+          "name": "ランキングパーツ (copy)",
+          "pattern": "<span class=\"pickup-ttl_txt\">{{sub_text}}</span>"
+        },
+        {
+          "name": "監修者パーツ",
+          "pattern": "<div class=\"writerBox\" itemscope itemtype=\"https://schema.org/Person\">\n  <span class=\"border\"></span>\n  <div class=\"writerBox-wrap\">\n    <div class=\"ttl\">監修者</div>\n    <div class=\"writerBox-inner\">\n      <figure class=\"writerBox-img b-radius\">\n        <img decoding=\"async\" src=\"{{img_src}}\" alt=\"著者画像\" itemprop=\"image\">\n      </figure>\n      <span class=\"inner-border\"></span>\n      <div class=\"profile\">\n        {{content}}\n      </div>\n    </div>\n  </div>\n</div>"
+        }
+      ]
+    },
+    {
+      "id": "custom_1770017657753",
       "name": "メガクリニック",
       "parts": [
+        {
+          "name": "画像パス",
+          "pattern": "https://terra-clinic.jp/file/uploads/{{name}}"
+        },
+        {
+          "name": "メタリフ",
+          "pattern": "https://terra-clinic.jp/file/lp/{{name}}"
+        },
         {
           "name": "大見出し",
           "pattern": "<h2>{{title}}</h2>"
@@ -1141,6 +859,316 @@
         {
           "name": "スライドトグルのパーツ内部 (Pattern 2)",
           "pattern": "<div class=\"slidetoggle2\">\n    <div class=\"sub-ttl\">{{title}}</div>\n    <div class=\"content\">\n        <div class=\"top-wrap\">\n            <div class=\"top-inner\">\n                <div class=\"img\">\n                    <img decoding=\"async\" src=\"{{src}}\" alt=\"\">\n                </div>\n                <div class=\"name\">\n                    {{name_content}}\n                </div>\n            </div>\n          <div class=\"slidetoggle-btn_more\">もっと見る<div class=\"slidetoggle-btn\"></div></div>\n        </div>\n        <div class=\"bottom-wrap\">\n            {{details}}\n        </div>\n    </div>\n</div>"
+        }
+      ]
+    },
+    {
+      "id": "custom_1770017666752",
+      "name": "MFビューティー",
+      "parts": [
+        {
+          "name": "画像パス",
+          "pattern": "https://www.mf-beautyclinic.com/file/uploads/{{name}}"
+        },
+        {
+          "name": "メタリフ",
+          "pattern": "https://www.mf-beautyclinic.com/file/click/{{name}}"
+        },
+        {
+          "name": "大見出し",
+          "pattern": "<h2>{{content}}</h2>"
+        },
+        {
+          "name": "小見出し (h3)",
+          "pattern": "<h3>{{content}}</h3>"
+        },
+        {
+          "name": "小見出し (h4)",
+          "pattern": "<h4>{{content}}</h4>"
+        },
+        {
+          "name": "見出しパーツ (subttl)",
+          "pattern": "<div class=\"subttl\" data-type=\"title\">{{content}}</div>"
+        },
+        {
+          "name": "文字装飾 (Blue)",
+          "pattern": "<span class=\"blue\">{{content}}</span>"
+        },
+        {
+          "name": "文字装飾 (Red)",
+          "pattern": "<span class=\"red\">{{content}}</span>"
+        },
+        {
+          "name": "文字装飾 (Caution)",
+          "pattern": "<span class=\"caution\">{{content}}</span>"
+        },
+        {
+          "name": "文字装飾 (Bold)",
+          "pattern": "<span class=\"b\">{{content}}</span>"
+        },
+        {
+          "name": "文字装飾 (Marker Blue)",
+          "pattern": "<span class=\"marker-blue\">{{content}}</span>"
+        },
+        {
+          "name": "文字装飾 (Marker Red)",
+          "pattern": "<span class=\"marker-red\">{{content}}</span>"
+        },
+        {
+          "name": "コンテンツ幅100%画像",
+          "pattern": "<div class=\"img-100\">\n{{content}}\n</div>"
+        },
+        {
+          "name": "テーブル",
+          "pattern": "<table class=\"table\">\n{{content}}\n</table>"
+        },
+        {
+          "name": "シンプルボックス",
+          "pattern": "<div class=\"simple-box\">\n    {{content}}\n</div>"
+        },
+        {
+          "name": "シンプルボックス (グレー)",
+          "pattern": "<div class=\"gray-box\">\n        {{content}}\n</div>"
+        },
+        {
+          "name": "シンプルボックスタイトル",
+          "pattern": "<p class=\"box-ttl\">{{content}}</p>"
+        },
+        {
+          "name": "番号付き見出しありのテキストボックス",
+          "pattern": "<div class=\"gray-box\">\n    <p class=\"box-ttl\"><span class=\"num\">{{num}}</span>{{title}}</p>\n    {{content}}\n</div>"
+        },
+        {
+          "name": "番号付きリスト",
+          "pattern": "<ol>\n{{content}}\n</ol>"
+        },
+        {
+          "name": "番号なしリスト",
+          "pattern": "<ul>\n{{content}}\n</ul>"
+        },
+        {
+          "name": "チェックリスト",
+          "pattern": "<div class=\"checkList-box\">\n     <ul class=\"checkList-ul\">\n        {{content}}\n     </ul>\n</div>"
+        },
+        {
+          "name": "説明リスト",
+          "pattern": "<dl class=\"info-list\">\n{{content}}\n</dl>"
+        },
+        {
+          "name": "画像左パーツ (Flex)",
+          "pattern": "<div class=\"flex-box\">\n    <img src=\"{{img_src}}\" alt=\"{{alt}}\">\n    <div class=\"flex-text\">\n        {{content}}\n    </div>\n</div>"
+        },
+        {
+          "name": "画像左パーツ (Float)",
+          "pattern": "<div class=\"float-box\">\n    <img src=\"{{img_src}}\" alt=\"{{alt}}\">\n    <div class=\"float-txt\">\n        {{content}}\n    </div>\n</div>"
+        },
+        {
+          "name": "下矢印",
+          "pattern": "<div class=\"arrow-b\"></div>"
+        },
+        {
+          "name": "下矢印 (Min)",
+          "pattern": "<div class=\"arrow-b-min\"></div>"
+        },
+        {
+          "name": "引用パーツ",
+          "pattern": "<blockquote class=\"quote\">\n    {{content}}\n</blockquote>"
+        },
+        {
+          "name": "引用画像",
+          "pattern": "<div class=\"quote-img\">\n    <img src=\"{{img_src}}\" alt=\"{{alt}}\">\n</div>"
+        },
+        {
+          "name": "吹き出しタイトル",
+          "pattern": "<div class=\"fukidashi\">{{content}}</div>"
+        },
+        {
+          "name": "まとめボックス",
+          "pattern": "<div class=\"summary\">\n    <div class=\"summary-ttl\">{{title}}</div>\n    <p>{{content}}</p>\n</div>"
+        },
+        {
+          "name": "調査概要ボックス",
+          "pattern": "<div class=\"research\">\n    <div class=\"research-ttl\">{{title}}</div>\n    <ul>\n        {{content}}\n    </ul>\n</div>"
+        },
+        {
+          "name": "補足用ボックス",
+          "pattern": "<div class=\"mininote\">\n    <div class=\"mininote-ttl\">{{title}}</div>\n    <div class=\"mininote-txt\">\n        {{content}}\n    </div>\n</div>"
+        },
+        {
+          "name": "右寄せリンク",
+          "pattern": "<div class=\"right-link__icon\">{{link}}</div>"
+        },
+        {
+          "name": "右寄せリンク（p）",
+          "pattern": "<p class=\"right-link__icon\">{{link}}</p>"
+        },
+        {
+          "name": "CTAボタン",
+          "pattern": "<div class=\"btn\">\n    {{link}}\n    <span class=\"arrow\"></span>\n</div>"
+        },
+        {
+          "name": "タグ (Left)",
+          "pattern": "<ul class=\"tag\">\n    {{content}}\n</ul>"
+        },
+        {
+          "name": "タグ (Center)",
+          "pattern": "<ul class=\"tag center\">\n    {{content}}\n</ul>"
+        },
+        {
+          "name": "タグ (on)",
+          "pattern": "<li class=\"item on\">{{content}}</li>"
+        },
+        {
+          "name": "タグ (off)",
+          "pattern": "<li class=\"item\">{{content}}</li>"
+        },
+        {
+          "name": "スクロールテーブル",
+          "pattern": "<div class=\"table-scroll\">\n    <table class=\"table\">\n        {{content}}\n    </table>\n</div>"
+        },
+        {
+          "name": "スティッキー付きテーブル（縦）",
+          "pattern": "<table class=\"table sticky-top\">\n    {{content}}\n</table>"
+        },
+        {
+          "name": "スティッキー付きテーブル（横）",
+          "pattern": "<div class=\"table-scroll\">\n    <table class=\"table sticky-left\">\n        {{content}}\n    </table>\n</div>"
+        },
+        {
+          "name": "ジャンプパーツ",
+          "pattern": "<ul class=\"jumpMenu\">\n    {{content}}\n</ul>"
+        },
+        {
+          "name": "ジャンプパーツ内部",
+          "pattern": "<li class=\"item\">{{content}}</li>"
+        },
+        {
+          "name": "リストパーツ：１",
+          "pattern": "<ul class=\"list_01\">\n    {{content}}\n</ul>"
+        },
+        {
+          "name": "リストパーツ：１内部",
+          "pattern": "<li class=\"list_01-item\">{{content}}</li>"
+        },
+        {
+          "name": "リストパーツ：２",
+          "pattern": "<ul class=\"list_02\">\n    {{content}}\n</ul>"
+        },
+        {
+          "name": "リストパーツ：２内部",
+          "pattern": "<li class=\"list_02-item\">{{content}}</li>"
+        },
+        {
+          "name": "ランキングパーツ",
+          "pattern": "<div class=\"name-area\">\n    <p class=\"name-text\">{{sub_text}}</p>\n    <a href=\"{{url}}\">\n        <span class=\"b\">\n            <p class=\"name\">{{name}}</p>\n        </span>\n    </a>\n</div>"
+        },
+        {
+          "name": "ステップパーツ",
+          "pattern": "<div class=\"step-wrap\">\n    {{content}}\n</div>"
+        },
+        {
+          "name": "ステップパーツ内部",
+          "pattern": "<div class=\"step\">\n    <p class=\"step-ttl\">{{title}}</p>\n    <div class=\"step-block\">\n        {{content}}\n    </div>\n</div>"
+        },
+        {
+          "name": "ナンバリングパーツ",
+          "pattern": "<ol class=\"numbering-area\">\n    {{content}}\n</ol>"
+        },
+        {
+          "name": "ナンバリングリストアイテム",
+          "pattern": "<li>\n    <p class=\"numbering-ttl\">\n        <span class=\"numbering-num\"></span>\n        <span class=\"b\">{{title}}</span>\n    </p>\n    <div class=\"numbering-block\">\n        {{content}}\n    </div>\n</li>"
+        },
+        {
+          "name": "関連記事パーツ",
+          "pattern": "<div class=\"relatedpost\">\n    <p class=\"relatedpost-ttl\">{{title}}</p>\n    <div class=\"relatedpost-wrap\">\n        {{content}}\n    </div>\n</div>"
+        },
+        {
+          "name": "関連記事内部",
+          "pattern": "<div class=\"relatedpost-post\">\n    <a href=\"{{link}}\">\n        <div class=\"image_wrap\"><img width=\"660\" height=\"408\" decoding=\"async\" src=\"{{img_src}}\" alt=\"{{alt}}\"></div>\n        <p class=\"relatedpost-post-ttl\">{{title}}</p>\n    </a>\n</div>"
+        },
+        {
+          "name": "Q＆Aパーツ",
+          "pattern": "<div class=\"faq-wrap\">\n    {{content}}\n</div>"
+        },
+        {
+          "name": "Q＆Aパーツ内部",
+          "pattern": "<dl class=\"faq\">\n    <dt class=\"faqQ\">\n    <span class=\"faqQ-icon\">Q</span>\n      <div itemprop=\"name\">{{question}}</div>\n<span class=\"faq-btn\"></span>\n    </dt>\n    <dd class=\"faqA\" itemprop=\"acceptedAnswer\" itemscope itemtype=\"https://schema.org/Answer\">\n      <div itemprop=\"text\">\n{{answer}}</div>\n    </dd>\n  </dl>"
+        },
+        {
+          "name": "Q＆Aパーツ（ショートコード）",
+          "pattern": "[qa-box01-wrap]\n{{content}}\n[/qa-box01-wrap]"
+        },
+        {
+          "name": "Q＆Aパーツ内部（ショートコード）",
+          "pattern": "[qa-box01 title=\"{{question}}\"]\n{{answer}}\n[/qa-box01]"
+        },
+        {
+          "name": "タブ切り替えパーツ",
+          "pattern": "<div class=\"tab-section\">\n    <ul class=\"tab-list\">\n        {{tabs}}\n    </ul>\n    <div class=\"tab-item\">\n        {{content}}\n    </div>\n</div>"
+        },
+        {
+          "name": "メリットパーツ",
+          "pattern": "<div class=\"merideme\" data-type=\"merit\">\n    <div class=\"merideme-ttl\">{{title}}</div>\n    <ul class=\"merideme-list\">\n        {{content}}\n    </ul>\n</div>"
+        },
+        {
+          "name": "デメリットパーツ",
+          "pattern": "<div class=\"merideme\" data-type=\"demerit\">\n    <div class=\"merideme-ttl\">{{title}}</div>\n    <ul class=\"merideme-list\">\n        {{content}}\n    </ul>\n</div>"
+        },
+        {
+          "name": "マップ",
+          "pattern": "<div class=\"map\">\n    <div class=\"map-ttl\">{{title}}</div>\n    <div class=\"map-inner\">\n        <iframe src=\"{{url}}\" width=\"{{width}}\" height=\"{{height}}\" style=\"{{style}}\" allowfullscreen=\"\" loading=\"lazy\"></iframe>\n    </div>\n</div>"
+        },
+        {
+          "name": "住所リスト",
+          "pattern": "<div class=\"addressAcco\">\n    {{content}}\n</div>"
+        },
+        {
+          "name": "レビューパーツ",
+          "pattern": "<div class=\"scroll-wrap\">\n    {{content}}\n</div>"
+        },
+        {
+          "name": "レビューパーツ内部（男性）",
+          "pattern": "<div class=\"comment\">\n    <div class=\"comment-top\">\n       <div class=\"comment-profile\">\n          <span class=\"comment-icon-m\"></span>\n          <div class=\"comment-name\">{{person}}</div>\n        </div>\n        <ul class=\"comment-plan\">\n          <li><span>{{label1}}</span>{{label1-contents}}</li>\n          <li><span>{{label2}}</span>{{label2-contents}}</li>\n          <li><span>{{label3}}</span>{{label3-contents}}</li>\n        </ul>\n      </div>\n      <div class=\"comment-bottom\">\n        <div class=\"right-box\">\n          {{content}}\n        </div>\n      </div>\n</div>"
+        },
+        {
+          "name": "レビューパーツ内部（女性）",
+          "pattern": "<div class=\"comment\">\n    <div class=\"comment-top\">\n       <div class=\"comment-profile\">\n          <span class=\"comment-icon-w\"></span>\n          <div class=\"comment-name\">{{person}}</div>\n        </div>\n        <ul class=\"comment-plan\">\n          <li><span>{{label1}}</span>{{label1-contents}}</li>\n          <li><span>{{label2}}</span>{{label2-contents}}</li>\n          <li><span>{{label3}}</span>{{label3-contents}}</li>\n        </ul>\n      </div>\n      <div class=\"comment-bottom\">\n        <div class=\"right-box\">\n          {{content}}\n        </div>\n      </div>\n</div>"
+        },
+        {
+          "name": "ポジションマップパーツ",
+          "pattern": "<div class=\"positioning\">\n    <div class=\"positioning-top\">\n        {{header_content}}\n    </div>\n    <div class=\"positioning-inner\">\n        {{map_content}}\n    </div>\n</div>"
+        },
+        {
+          "name": "ランキングパーツ (Rank Icon)",
+          "pattern": "<div class=\"name-area\">\n    {{content}}\n</div>"
+        },
+        {
+          "name": "ランキングパーツ (copy)",
+          "pattern": "<p class=\"name-text\">{{sub_text}}</p>"
+        },
+        {
+          "name": "ランキングパーツ (link)",
+          "pattern": "<span class=\"b\"><p class=\"name\">{{name}}</p></span>"
+        },
+        {
+          "name": "画像横スクロール",
+          "pattern": "<div class=\"scrollBoxImg\">\n    <div class=\"scrollBoxImg-wrap\">\n        <ul class=\"scrollBoxImg-list\">\n            {{content}}\n        </ul>\n    </div>\n</div>"
+        },
+        {
+          "name": "横スクロール発生させるためのパーツ",
+          "pattern": "<div class=\"scroll-x\">\n    {{content}}\n</div>"
+        },
+        {
+          "name": "スライドトグルのパーツ",
+          "pattern": "<div class=\"toggleSection-wrap\">\n    {{content}}\n</div>"
+        },
+        {
+          "name": "アコーディオン",
+          "pattern": "<div class=\"accordion\">\n    {{content}}\n</div>"
+        },
+        {
+          "name": "シミュレーションパーツ",
+          "pattern": "<div class=\"simulation\">\n    {{content}}\n</div>"
         }
       ]
     }
