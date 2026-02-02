@@ -108,6 +108,8 @@ class MigrationEngine {
         const targetMap = {};
         targetParts.forEach(p => targetMap[p.name] = p.pattern);
 
+        const missingMappings = []; // Track missing parts
+
         // Iterate over source parts and attempt to find valid matches
         // Optimization: Sort source parts by complexity or length? 
         // For now, sequential order.
@@ -120,7 +122,16 @@ class MigrationEngine {
         for (const sPart of sortedSourceParts) {
             const tPattern = targetMap[sPart.name];
             if (!tPattern) {
-                // console.warn(`No target pattern found for part: ${sPart.name}`);
+                // Check if this source part IS actually used in the HTML.
+                // If it is used but we can't convert it, that's a reportable "Missing Mapping".
+                // Use standard compilePattern (STABLE check)
+                const { regex } = this.compilePattern(sPart.pattern);
+                if (regex.test(currentHtml)) {
+                    missingMappings.push({
+                        name: sPart.name,
+                        pattern: sPart.pattern
+                    });
+                }
                 continue;
             }
 
@@ -180,7 +191,7 @@ class MigrationEngine {
             }
         });
 
-        return { code: codeOutput, preview: previewHtml };
+        return { code: codeOutput, preview: previewHtml, missing: missingMappings };
     }
 
     /**
