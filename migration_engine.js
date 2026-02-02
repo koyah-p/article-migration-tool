@@ -164,8 +164,8 @@ class MigrationEngine {
         let codeOutput = currentHtml.replace(/<!--__DIFF_START__-->|<!--__DIFF_END__-->/g, '');
 
         // Fix: Unescape comment closers that might have been mangled to --&gt;
-        // This ensures <!-- ... --> remains valid and doesn't break the page.
-        codeOutput = codeOutput.replace(/--&gt;/g, '-->');
+        // Also unescape the start if it was mangled to &lt;!--
+        codeOutput = codeOutput.replace(/--&gt;/g, '-->').replace(/&lt;!--/g, '<!--');
 
         // Preview: We want to show the CODE with highlights, not rendered HTML.
         // 1. Split by markers
