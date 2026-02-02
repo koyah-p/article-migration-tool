@@ -421,4 +421,3 @@ class MigrationEngine {
         return -1; // Not found
     }
 }
-
