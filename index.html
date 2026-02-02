@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>記事移行ツール (Article Migration Tool)</title>
+    <title>ハイパー記事移管くん</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -51,6 +51,17 @@
                             <!-- Populated by JS -->
                         </ul>
                     </div>
+
+                    <!-- Export Button for Sharing -->
+                    <div style="margin-top: 15px; border-top: 1px dashed #bae6fd; padding-top: 10px;">
+                        <h3 style="margin-top:0; font-size:0.9rem; color:#0369a1;">▼ 設定の共有 (管理者用)</h3>
+                        <p style="font-size:0.8rem; color:#666; margin-bottom:5px;">
+                            現在の設定（登録済みサイト全て）をJSONファイルとしてダウンロードします。
+                            これを `docs/resources/parts_registry.json` に上書きしてGitHubにアップロードすると、全員に共有できます。
+                        </p>
+                        <button id="btn-export-json" class="btn-secondary"
+                            style="width:100%; font-size:0.85rem;">設定をエクスポート (JSON)</button>
+                    </div>
                 </div>
 
                 <div class="controls">
@@ -89,6 +100,7 @@
                 <div class="tabs">
                     <button class="tab-btn active" data-tab="preview">差分確認 (コード)</button>
                     <button class="tab-btn" data-tab="code">Rawコード</button>
+                    <button class="tab-btn" data-tab="report">未変換パーツ一覧</button>
                 </div>
 
                 <div class="tab-content active" id="tab-preview">
@@ -98,6 +110,15 @@
                 </div>
                 <div class="tab-content" id="tab-code">
                     <textarea id="output-html" readonly></textarea>
+                </div>
+                <div class="tab-content" id="tab-report">
+                    <p style="font-size: 0.9rem; color: #666; padding: 10px;">
+                        変換元(Source)には存在するが、変換先(Target)に定義がないため変換できなかったパーツの一覧です。
+                        <br>これらは変換されずにそのまま残っています。変換先にも該当する定義を追加してください。
+                    </p>
+                    <div id="missing-parts-container" style="padding:10px; padding-top:0;">
+                        <!-- Table will be injected here -->
+                    </div>
                 </div>
             </section>
         </main>
